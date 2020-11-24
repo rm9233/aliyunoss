@@ -1,0 +1,29 @@
+PODS:
+  - aliyunoss (0.0.1):
+    - AliyunOSSiOS
+    - Flutter
+  - AliyunOSSiOS (2.10.8)
+  - Flutter (1.0.0)
+
+DEPENDENCIES:
+  - aliyunoss (from `.symlinks/plugins/aliyunoss/ios`)
+  - Flutter (from `Flutter`)
+
+SPEC REPOS:
+  trunk:
+    - AliyunOSSiOS
+
+EXTERNAL SOURCES:
+  aliyunoss:
+    :path: ".symlinks/plugins/aliyunoss/ios"
+  Flutter:
+    :path: Flutter
+
+SPEC CHECKSUMS:
+  aliyunoss: dfa8819f3bac3246b1a0d23a8aa99636098bc3fd
+  AliyunOSSiOS: 8db92936545593b9e5c66d680ef2ac0738946651
+  Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
+
+PODFILE CHECKSUM: f32fb4e7c14f8b3ca19a369d7be425dd9241af27
+
+COCOAPODS: 1.9.3

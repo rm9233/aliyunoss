@@ -1,0 +1,40 @@
+group 'com.superkids.aliyunoss'
+version '1.0'
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.5.0'
+
+    }
+}
+
+rootProject.allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 28
+
+    defaultConfig {
+        minSdkVersion 16
+    }
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+}
+
+dependencies {
+    implementation 'com.aliyun.dpa:oss-android-sdk:+'
+    implementation 'com.squareup.okhttp3:okhttp:4.0.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.0.0'
+}
