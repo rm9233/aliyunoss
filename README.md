@@ -2,13 +2,35 @@
 
 A new Flutter plugin.
 
-## Getting Started
+目前只能上传，其他后续在完善
 
-This project is a starting point for a Flutter
-[plug-in package](https://flutter.dev/developing-packages/),
-a specialized package that includes platform-specific implementation code for
-Android and/or iOS.
+使用方法:
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+  OssEngine.onProgress = (Map map){
+    
+      // 进度 {totalSize: 8924, currentSize: 4096}
+      print(map);
+    };
+
+    OssEngine.onUpload = (Map map){
+     
+      // 是否上传成功或失败 {totalSize: 8924, currentSize: 4096}
+      //{path: https://super3.oss-cn-beijing/test.png, status: true}
+      //{error: "??", status: false}
+      
+      print(map);
+    };
+
+ await Aliyunoss.init(se.accessKeyId,se.accessKeySecret,se.stsToken,se.bucket,se.region);
+await Aliyunoss.upload(path,se.bucket,se.region,"test.png");
+    
+    
+后台返回内容
+
+{
+	"region": "<你的 region >",
+	"accessKeyId": "<你的 accessKeyId >",
+	"accessKeySecret": "<你的 accessKeySecret >",
+	"stsToken": "<你的 stsToken>",
+	"bucket": "<你的 bucket>"
+}
