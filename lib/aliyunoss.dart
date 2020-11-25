@@ -30,6 +30,7 @@ class Aliyunoss {
   }
 
   static Future<String> init(String accessKeyId,String accessKeySecret,String stsToken,String bucket,String region) async{
+     region += ".aliyuncs.com";
     final String result = await _channel.invokeMethod('init',{"region":region,"accessKeyId":accessKeyId,"accessKeySecret":accessKeySecret,"stsToken":stsToken,"bucket":bucket});
   }
 
